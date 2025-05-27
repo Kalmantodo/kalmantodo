@@ -4,7 +4,7 @@
 > This repository only contains standalone Focalboard. If you're looking for the Mattermost plugin please see [mattermost/mattermost-plugin-boards](https://github.com/mattermost/mattermost-plugin-boards).
 >
 
-# Focalboard
+# Kalmantodo
 
 ![CI Status](https://github.com/mattermost/focalboard/actions/workflows/ci.yml/badge.svg)
 ![CodeQL](https://github.com/mattermost/focalboard/actions/workflows/codeql-analysis.yml/badge.svg)
@@ -13,7 +13,7 @@
 
 ![Focalboard](website/site/static/img/hero.jpg)
 
-Focalboard is an open source, multilingual, self-hosted project management tool that's an alternative to Trello, Notion, and Asana.
+Kalmantodo is an open source, multilingual, self-hosted todo board, fork of Focalboard.
 
 It helps define, organize, track and manage work across individuals and teams. Focalboard comes in two editions:
 
@@ -21,7 +21,7 @@ It helps define, organize, track and manage work across individuals and teams. F
 
 * **[Personal Server](https://www.focalboard.com/download/personal-edition/ubuntu/)**: A standalone, multi-user server for development and personal use.
 
-## Try Focalboard
+## Try Kalmantodo
 
 ### Personal Desktop (Windows, Mac or Linux Desktop)
 
@@ -116,5 +116,4 @@ Before checking in commits, run `make ci`, which is similar to the `.gitlab-ci.y
 ### Staying informed
 
 * **Changes**: See the [CHANGELOG](CHANGELOG.md) for the latest updates
-* **Bug Reports**: [File a bug report](https://github.com/mattermost/focalboard/issues/new?assignees=&labels=bug&template=bug_report.md&title=)
-* **Chat**: Join the [~Focalboard community channel](https://community.mattermost.com/core/channels/focalboard)
+* **Bug Reports**: [File a bug report](https://github.com/Kalmantodo/kalmantodo/issues)
