@@ -1,5 +1,14 @@
 # Kalmantodo
 
+> THIS IS A FRESH FORK OF FOCALBOARD (https://github.com/mattermost-community/focalboard/)
+>
+> Lore :
+> https://github.com/mattermost-community/focalboard/issues/5038#issuecomment-2914056014
+>
+> First step is to make it autonomous. Successful forks like Simutrans (fork of OpenTTD), made it because they became solid, distinct projects.
+>
+> Will release a new version every 6 months, as Ubuntu does.
+
 ![CI Status](https://github.com/mattermost/focalboard/actions/workflows/ci.yml/badge.svg)
 ![CodeQL](https://github.com/mattermost/focalboard/actions/workflows/codeql-analysis.yml/badge.svg)
 ![Dev Release](https://github.com/mattermost/focalboard/actions/workflows/dev-release.yml/badge.svg)
