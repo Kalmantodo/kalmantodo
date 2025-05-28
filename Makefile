@@ -183,44 +183,6 @@ webapp-ci: ## Webapp CI: linting & testing.
 webapp-test: ## jest tests for webapp
 	cd webapp; npm run test
 
-mac-app: server-mac webapp ## Build Mac application.
-	rm -rf mac/temp
-	rm -rf mac/dist
-	rm -rf mac/resources/bin
-	rm -rf mac/resources/pack
-	mkdir -p mac/resources/bin
-	cp bin/mac/focalboard-server mac/resources/bin/focalboard-server
-	cp app-config.json mac/resources/config.json
-	cp -R webapp/pack mac/resources/pack
-	mkdir -p mac/temp
-	xcodebuild archive -workspace mac/Focalboard.xcworkspace -scheme Focalboard -archivePath mac/temp/focalboard.xcarchive CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED="NO" CODE_SIGNING_ALLOWED="NO" \
-		|| { echo "xcodebuild failed, did you install the full Xcode and not just the CLI tools?"; exit 1; }
-	mkdir -p mac/dist
-	cp -R mac/temp/focalboard.xcarchive/Products/Applications/Focalboard.app mac/dist/
-	# xcodebuild -exportArchive -archivePath mac/temp/focalboard.xcarchive -exportPath mac/dist -exportOptionsPlist mac/export.plist
-	cp NOTICE.txt mac/dist
-	cp webapp/NOTICE.txt mac/dist/webapp-NOTICE.txt
-	cd mac/dist; zip -r focalboard-mac.zip Focalboard.app MIT-COMPILED-LICENSE.md NOTICE.txt webapp-NOTICE.txt
-
-win-wpf-app: server-dll webapp ## Build Windows WPF application.
-	cd win-wpf && ./build.bat
-	cd win-wpf && ./package.bat
-	cd win-wpf && ./package-zip.bat
-
-linux-app: webapp ## Build Linux application.
-	rm -rf linux/temp
-	rm -rf linux/dist
-	mkdir -p linux/dist
-	mkdir -p linux/temp/focalboard-app
-	cp app-config.json linux/temp/focalboard-app/config.json
-	cp NOTICE.txt linux/temp/focalboard-app/
-	cp webapp/NOTICE.txt linux/temp/focalboard-app/webapp-NOTICE.txt
-	cp -R webapp/pack linux/temp/focalboard-app/pack
-	cd linux; make build
-	cp -R linux/bin/focalboard-app linux/temp/focalboard-app/
-	cd linux/temp; tar -zcf ../dist/focalboard-linux.tar.gz focalboard-app
-	rm -rf linux/temp
-
 swagger: ## Generate swagger API spec and clients based on it.
 	mkdir -p server/swagger/docs
 	mkdir -p server/swagger/clients
