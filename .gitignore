@@ -15,7 +15,7 @@ pids
 .DS_Store
 
 # VSCode project files
-
+.vscode
 *.code-workspace
 
 # golang
@@ -55,6 +55,7 @@ octo*.db
 focalboard*.db
 *.boardarchive
 .eslintcache
+.vscode/settings.json
 # config.json is copied from app-config.json in the Makefile
 mac/resources/config.json
 mac/temp
