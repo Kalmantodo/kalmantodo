@@ -8,6 +8,8 @@
 > First step is to make it autonomous. Successful forks like Simutrans (fork of OpenTTD), made it because they became solid, distinct projects.
 >
 > Will release a new version every 6 months, as Ubuntu does.
+>
+> Development takes place on dev branch, please make a branch from dev for every feature, e.g. dev -> dev-emojis
 
 ![CI Status](https://github.com/mattermost/focalboard/actions/workflows/ci.yml/badge.svg)
 ![CodeQL](https://github.com/mattermost/focalboard/actions/workflows/codeql-analysis.yml/badge.svg)
